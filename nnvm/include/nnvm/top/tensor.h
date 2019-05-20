@@ -86,6 +86,7 @@ enum TypeFlag {
   kUint16 = 8,
   kUint32 = 9,
   kUint64 = 10,
+  kBfloat16 = 11
 };
 
 enum IndicatorRuleFlag {
@@ -107,7 +108,8 @@ enum IndicatorRuleFlag {
   .add_enum("int8",  kInt8)                                         \
   .add_enum("int16", kInt16)                                        \
   .add_enum("int32", kInt32)                                        \
-  .add_enum("int64", kInt64)
+  .add_enum("int64", kInt64)                                        \
+  .add_enum("bfloat16", kBfloat16)
 
 struct CastParam : public dmlc::Parameter<CastParam> {
   int dtype;
